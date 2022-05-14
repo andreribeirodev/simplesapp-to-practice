@@ -16,21 +16,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setFragment(homeFragment)
         binding.btnHome.setOnClickListener(this)
         binding.btnConsole.setOnClickListener(this)
         binding.btnGames.setOnClickListener(this)
     }
 
-    override fun onClick(btn: View) {
-        when (btn) {
+    override fun onClick(button: View) {
+        when (button) {
             binding.btnHome -> {
-                btn.setOnClickListener { setFragment(homeFragment) }
+                button.setOnClickListener { setFragment(homeFragment) }
             }
             binding.btnConsole -> {
-                btn.setOnClickListener { setFragment(consoleFragment) }
+                button.setOnClickListener { setFragment(consoleFragment) }
             }
             binding.btnGames -> {
-                btn.setOnClickListener { setFragment(gameFragment) }
+                button.setOnClickListener { setFragment(gameFragment) }
             }
         }
     }
