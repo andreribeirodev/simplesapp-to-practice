@@ -1,3 +1,6 @@
 package com.andreribeiro.recyclerviewtraining
 
-data class Contato()
+data class Contato(
+    val nome: String,
+    val telefone: String
+)

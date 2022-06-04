@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".Fragment_one">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="First Name"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:hint="Last Name"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/edtFirstName"
+            app:layout_constraintStart_toStartOf="@id/edtFirstName"
+            app:layout_constraintTop_toBottomOf="@id/edtFirstName" />
+
+        <Button
+            android:id="@+id/btnToNextFragment03"
+            android:layout_width="0dp"
+            android:backgroundTint="@color/black"
+            android:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="TO FRAGMENT 02"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Fragment 01"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnToNextFragment03"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtLastName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
